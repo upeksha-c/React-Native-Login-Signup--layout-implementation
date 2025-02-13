@@ -84,7 +84,7 @@ export default function SignupView() {
                     placeholder='PASSWORD'
                     value= {password}
                     onChangeText={(e) => setPassword(e)}
-                    secureTextEntry 
+                    secureTextEntry = {true}
                 />
             </View>
 
@@ -95,7 +95,7 @@ export default function SignupView() {
                     placeholder='COMFIRM PASSWORD'
                     value={confirmPassword}
                     onChangeText={(e) => setConfirmPassword(e)}
-                    secureTextEntry 
+                    secureTextEntry = {true}
                 />
             </View>
 
@@ -149,7 +149,12 @@ const styles = StyleSheet.create({
         width:"100%",
         backgroundColor: "white",
         elevation: 3,
-        borderRadius:10
+        borderRadius:10,
+        //for ios shadow
+        shadowColor: "Darkgray", // iOS shadow
+        shadowOffset: { width: 0, height: 4 },// Moves the shadow downward by 4 pixels, no horizontal shift.
+        shadowOpacity: 0.3,//Controls how dark the shadow is 
+        shadowRadius: 4//Blurs the shadow to make it softer
                 
     },
     icon:{
@@ -161,7 +166,7 @@ const styles = StyleSheet.create({
     btnContainer:{
         flexDirection:"row",
         width:150,
-        alignSelf: "flex-end",
+        alignSelf: "flex-end",//Positions button to the right.
         padding:15,
         backgroundColor: "#FFA500",
         borderRadius:10,
@@ -172,8 +177,8 @@ const styles = StyleSheet.create({
     signInContainer: {
         flex:1,
         flexDirection:'row',
-        justifyContent:'center',
-        alignItems:"flex-end"
+        justifyContent:'center', //Centers the content horizontally
+        alignItems:"flex-end" //Aligns content to the bottom.
     },
     signInText:{
         color:"#FFA500"

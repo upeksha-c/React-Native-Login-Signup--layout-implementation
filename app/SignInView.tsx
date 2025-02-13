@@ -1,6 +1,5 @@
 import { View, Text, TextInput, StyleSheet, Image, Pressable, Dimensions } from 'react-native'
 import React, { useState } from 'react'
-import Feather from '@expo/vector-icons/Feather';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
@@ -67,7 +66,7 @@ export default function SignInView() {
                     placeholder='PASSWORD'
                     value= {password}
                     onChangeText={(e) => setPassword(e)}
-                    secureTextEntry 
+                    secureTextEntry = {true}
                 />
             </View>
             <Pressable onPress={forgotPwd}>
